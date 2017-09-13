@@ -1,0 +1,532 @@
+body {
+    color: #000000;
+    font-family: "Bad Script", cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+h2, .h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+h3, .h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.row {
+  margin: 0;
+}
+.sl-hide {
+  font-size: 0.000001px;
+}
+.line {
+  background-image: url(/assets/img/line.png);
+  background-repeat: repeat-x;
+  line-height: 0.5;
+}
+.section {
+  padding: 30px 0;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+  min-height: -o-calc(100vh - 80px); /* opera */
+  min-height: -webkit-calc(100vh - 80px); /* google, safari */
+  min-height: -moz-calc(100vh - 80px); /* firefox */
+  width: 100%;
+  display: table;
+}
+.section__inner {
+  margin: 50px;
+} 
+.vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media screen and (max-width: 767px)
+{
+  .section {
+    padding: 15px 0;
+  }
+  .section__inner {
+    margin: 25px;
+  } 
+  .col-sm-12 {
+    padding: 0;
+  }
+  .col-xs-12 {
+    padding: 0;
+  }
+}
+
+/* Header */
+@navbar-height: 80px;
+
+.navbar-inverse {
+  background-color: #000;
+}
+.navbar-nav li a {
+  height: 80px;
+  padding-top: 50px;
+}
+.navbar-nav a:focus, .navbar-nav a:hover {
+  background-image: url(/assets/img/line-navbar.png), url(/assets/img/line-navbar.png), url(/assets/img/line-navbar4.png), url(/assets/img/line-navbar4.png);
+  background-position: 50% 100%, 50% 47%, 5% 78%, 95% 78%;
+  background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
+  transition: background-position-x .8s;
+}
+.callback {
+  display: block;
+  position: absolute;
+  text-align: right;
+  top: 20px;
+  right: 15px;
+  width: 300px;
+  height: 70px;
+}
+.callback p {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+}
+@media screen and (max-width: 1030px) 
+{
+  .navbar-nav li a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .callback {
+  top: 25px;
+  }
+  .callback p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 864px) 
+{
+  .navbar-nav li a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px)
+{
+  .callback {
+    right: 100px;
+    right: 90px;
+  }
+  .navbar-nav li a {
+    padding: 10px;
+    line-height: 1;
+    height: 100%;
+    text-shadow: 0px 0px 10px #000;
+  }
+  .navbar-nav a:focus, .navbar-nav a:hover {
+    background-image: none;
+    background-position: none;
+    background-repeat: none;
+    transition: none;
+  }
+  .navbar-inverse, .nav{
+    background: rgba(0,0,0,0.6);
+  }
+  .navbar-header {
+    background: #000;
+  }
+}
+@media screen and (max-width: 360px)
+{
+  .callback p {
+    font-size: 16px;
+  }
+}
+/* Header */
+
+/* Section photo */
+.photo {
+  padding-top: 80px;
+  min-height: 100vh;
+  background: url(/assets/img/smile.jpg) center right no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.photo__text{
+  font-family: Bickham, cursive;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 90px;
+  max-width: 650px;
+  text-align: left;
+  padding: 20px 0 0 20px;
+  text-shadow: 0px 0px 10px #000000;
+}
+@media screen and (max-width: 1132px) and (orientation: landscape)
+{
+  .photo__text{
+    font-size: 70px;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 998px) and (orientation: landscape)
+{
+  .photo__text{
+    font-size: 60px;
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 1602px) and (orientation: portrait)
+{
+  .photo {
+    background: url(/assets/img/smile_portrait.jpg) center right no-repeat;
+    background-size: cover;
+  }
+  .photo__text{
+    line-height: 1.2;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+@media screen and (max-width: 667px) and (orientation: landscape)
+{
+  .photo__text{
+    font-size: 50px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 568px) and (orientation: landscape)
+{
+  .photo__text{
+    font-size: 50px;
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 480px) and (orientation: landscape)
+{
+  .photo__text{
+    font-size: 40px;
+    max-width: 270px;
+  }
+}
+@media screen and (max-width: 435px) and (orientation: portrait)
+{
+  .photo__text{
+    font-size: 55px;
+    max-width: 100%;
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait)
+{
+  .photo__text{
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 320px) and (orientation: portrait)
+{
+  .photo__text{
+    font-size: 45px;
+    left: 10px;
+  }
+}
+/* Section photo */
+
+/* Section "If You" and Section Scheme of Work */
+.scheme-col, .scheme-col2 {
+  float: left;
+  width: 20%;
+  padding: 25px;
+  position: relative;
+}
+.scheme__text{
+  font-size: 25px;
+}
+.after:after {
+  font-family: 'icon';
+  content: "\e90e";
+  font-size: 30px;
+  position: absolute;
+  top: 100px;
+  left: 90%;
+}
+.anim1 {
+  animation-delay: 0.5s;
+  animation-name: bounceInLeft;
+}
+.anim2 {
+  animation-delay: 1s; 
+  animation-name: bounceInUp;
+}
+.anim3 {
+  animation-delay: 1.5s; 
+  animation-name: bounceInDown;
+}
+.anim4 {
+  animation-delay: 2s; 
+  animation-name: bounceInUp;
+}
+.anim5 {
+  animation-delay: 2.5s; 
+  animation-name: bounceInRight;
+}
+.anim6 {
+  animation-duration: 5s; 
+  animation-delay: 2s; 
+  animation-name: bounceInUp;
+}
+@media screen and (max-width: 1023px)
+{
+  .scheme-col, .scheme-col2 {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+  .scheme__text{
+    float: left;
+    padding-left: 50px;
+  }
+  .float {
+    float: left;
+  }
+}
+@media screen and (max-width: 860px)
+{
+  .scheme__text {
+    max-width: 400px;
+  }
+  .media-lines-1 {
+    position: absolute;
+    top: 33%;
+  }
+}
+@media screen and (max-width: 589px)
+{
+  .scheme-col, .scheme-col2 {
+    padding: 20px 0;
+  }
+  .scheme__text{
+    padding-left: 30px;
+    max-width: 300px;
+  }
+  .media-lines-1 {
+    top: 25%;
+  }
+  .media-lines-2 {
+    position: absolute;
+    top: 33%;
+  }
+}
+@media screen and (max-width: 532px)
+{
+  .scheme-col2 {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 386px)
+{
+  .scheme-col {
+    padding: 30px 0;
+  }
+  .scheme-col2:last-of-type {
+    margin-bottom: 70px;
+  }
+}
+/* Section "If You" and Section Scheme of Work */
+
+/* Section Services */
+#section-services article {
+  text-align: center;
+}
+#section-services article p {
+  text-align: left;
+  padding: 20px 0 0 20%;
+}
+#section-services article ul {
+  text-align: left;
+  padding: 0 0 0 20%;
+}
+#section-services article ul li {
+  list-style-type: none;
+  margin: 5px 0;
+}
+#section-services img {
+  margin: 10.7px;
+  width: 100%;
+}
+.relative {
+  position: relative;
+}
+.lines {
+  position: absolute;
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+  width: 51%;
+  height: 40%;
+  bottom: -25px;
+  right: -25px;
+}
+.lines_inv {
+  position: absolute;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+  width: 51%;
+  height: 40%;
+  bottom: -25px;
+  left: -25px;
+}
+.hid {
+  display: none;
+}
+@media screen and (max-width: 990px)
+{
+  .display_none {
+    display: none !important;
+  }
+  .lines {
+    border-right: none;
+    width: 100%;
+    bottom: -15px;
+    left: 0px;
+  }
+  .lines_inv {
+    border-left: none;
+    width: 100%;
+    bottom: -15px;
+    left: 0px;
+  }
+  .hid {
+    display: block !important;
+  }
+  #section-services article p {
+    padding: 20px 0 0 0;
+  }
+  #section-services article ul {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 990px)
+{
+  #section-services article {
+    padding-left: 25px;
+  }
+}
+/* Section Services */
+
+/* Section About Photographer */
+.about_photographer__photo {
+  padding: 0px;
+  margin-bottom: 25px;
+}
+.about_photographer__photo img {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 250px;
+}
+.about_photographer__text {
+  padding: 0px;
+  text-align: left;
+}
+#section-about_photographer article ul {
+  margin: 0;
+}
+#section-about_photographer article ul li {
+  margin: 15px 0;
+}
+.anim7 {
+  animation-delay: 0.5s; 
+  animation-name: bounceInRight;
+}
+/* Section About Photographer */
+
+/* Section Comments */
+.comments__photo {
+  padding: 0px;
+  margin-bottom: 25px;
+}
+.comments__photo img {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 250px;
+}
+.comments__text {
+  padding: 0px;
+  text-align: left;
+  font-size: 25px;
+}
+.comments__links {
+  margin-top: 100px;
+  position: relative;
+}
+.comments__link {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  border-radius: 100%;
+  background: rgba(0,0,0, .5);
+  transition: background .4s;
+  opacity: 1;
+  cursor: pointer;
+}
+.comments__link:hover {
+  background: #000;
+}
+.comments__link-black {
+  background: #000;
+}
+@media screen and (max-width: 767px)
+{
+  .comments__text {
+    text-align: center;
+    }
+}
+/* Section Comments */
+
+/* Section Contacts */
+.anim8 {
+  animation-delay: 2.0s; 
+  animation-name: bounceInRight;
+}
+.scheme-col-contacts {
+  display: inline-block;
+  margin: 35px;
+  transition: transform .4s;
+}
+.scheme-col-contacts a {
+  color: #000000;
+  text-decoration: none;
+}
+.scheme-col-contacts:hover { 
+  -moz-transform: rotate(15deg); /* Для Firefox */
+  -ms-transform: rotate(15deg); /* Для IE */
+  -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(15deg); /* Для Opera */
+  transform: rotate(15deg);
+}  
+/* Section Contacts */
+
+/* Footer */
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+footer p {
+  color: #ffffff;
+  padding: 30px;
+  margin-top: 30px;
+  height: 40px;
+}
+@media screen and (max-width: 704px)
+{
+  footer p {
+    padding: 15px 5px;
+    font-size: 18px;
+  }
+}
+.footer {
+  min-height: calc(100vh - 190px);
+  min-height: -o-calc(100vh - 190px); /* opera */
+  min-height: -webkit-calc(100vh - 190px); /* google, safari */
+  min-height: -moz-calc(100vh - 190px); /* firefox */
+}
+/* Footer */

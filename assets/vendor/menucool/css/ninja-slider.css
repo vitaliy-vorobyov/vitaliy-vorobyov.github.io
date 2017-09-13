@@ -1,0 +1,193 @@
+#ninja-slider, #ninja-slider2, #ninja-slider3, #ninja-slider4 {
+    width:76.5%;
+    background:#fff;
+    padding: 0px;
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+    float: left;
+}
+@media screen and (max-width: 990px)
+{
+  #ninja-slider, #ninja-slider2, #ninja-slider3, #ninja-slider4 {
+    width:100%;
+  }
+}
+#ninja-slider.fullscreen, #ninja-slider2.fullscreen, #ninja-slider3.fullscreen, #ninja-slider4.fullscreen {
+    background:black;
+}
+#ninja-slider div.fs-icon, #ninja-slider2 div.fs-icon, #ninja-slider3 div.fs-icon, #ninja-slider4 div.fs-icon {
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+#ninja-slider .slider-inner:hover div.fs-icon, #ninja-slider.fullscreen div.fs-icon,
+#ninja-slider2 .slider-inner:hover div.fs-icon, #ninja-slider2.fullscreen div.fs-icon,
+#ninja-slider3 .slider-inner:hover div.fs-icon, #ninja-slider3.fullscreen div.fs-icon,
+#ninja-slider4 .slider-inner:hover div.fs-icon, #ninja-slider4.fullscreen div.fs-icon {
+    opacity: 1;
+}
+#ninja-slider .slider-inner, #ninja-slider2 .slider-inner, #ninja-slider3 .slider-inner, #ninja-slider4 .slider-inner {
+    margin:0 auto;/*center-aligned */
+    font-size:0px;
+    position:relative;
+    box-sizing:border-box;
+}
+#ninja-slider.fullscreen .slider-inner, #ninja-slider2.fullscreen .slider-inner, 
+#ninja-slider3.fullscreen .slider-inner, #ninja-slider4.fullscreen .slider-inner {
+    width:100%;
+    max-width:950px;
+}
+#ninja-slider ul, #ninja-slider2 ul, #ninja-slider3 ul, #ninja-slider4 ul {
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    list-style:none;
+    padding:0;
+    box-sizing:border-box;
+    touch-action:pan-y;
+}
+#ninja-slider li, #ninja-slider2 li, #ninja-slider3 li, #ninja-slider4 li {
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+#ninja-slider li.ns-show, #ninja-slider2 li.ns-show, #ninja-slider3 li.ns-show, #ninja-slider4 li.ns-show {
+    opacity:1;
+}
+/* --------- slider image ------- */  
+#ninja-slider .ns-img, #ninja-slider2 .ns-img, #ninja-slider3 .ns-img, #ninja-slider4 .ns-img {
+    background-color:rgba(0,0,0,0.3);
+    background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/
+    /*decorate border*/
+    box-shadow: 0 1px 5px rgba(0,0,0,.8),inset 0 0 2px rgba(255,255,255,.4);
+    cursor:default;
+    display:block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */   
+#ninja-slider-pause-play, #ninja-slider2-pause-play, #ninja-slider3-pause-play, #ninja-slider4-pause-play { 
+    display:none;
+} 
+#ninja-slider-prev, #ninja-slider-next, #ninja-slider2-prev, #ninja-slider2-next,
+#ninja-slider3-prev, #ninja-slider3-next, #ninja-slider4-prev, #ninja-slider4-next {
+    position: absolute;
+    display:inline-block;
+    width:42px;
+    height:56px;
+    line-height:56px;
+    top: 50%;
+    margin-top:-28px;
+    background-color:rgba(0,0,0,0.4);
+    background-color:#ccc\9;/*IE8 hack*/
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    border-radius:2px;
+    z-index:10;
+    opacity:0.3; 
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.7s;
+}
+#ninja-slider-prev:hover, #ninja-slider-next:hover, #ninja-slider2-prev:hover, #ninja-slider2-next:hover,
+#ninja-slider3-prev:hover, #ninja-slider3-next:hover, #ninja-slider4-prev:hover, #ninja-slider4-next:hover {
+    opacity:1;
+}
+#ninja-slider.fullscreen #ninja-slider-prev:hover, #ninja-slider.fullscreen #ninja-slider-next:hover, 
+#ninja-slider2.fullscreen #ninja-slider2-prev:hover, #ninja-slider2.fullscreen #ninja-slider2-next:hover,
+#ninja-slider3.fullscreen #ninja-slider3-prev:hover, #ninja-slider3.fullscreen #ninja-slider3-next:hover,
+#ninja-slider4.fullscreen #ninja-slider4-prev:hover, #ninja-slider4.fullscreen #ninja-slider4-next:hover {
+    width:90px;
+}
+#ninja-slider-prev, #ninja-slider2-prev, #ninja-slider3-prev, #ninja-slider4-prev {
+    left: 0;
+}
+#ninja-slider-next, #ninja-slider2-next, #ninja-slider3-next, #ninja-slider4-next {
+    right: 0;
+}
+#ninja-slider.fullscreen #ninja-slider-prev, #ninja-slider2.fullscreen #ninja-slider2-prev,
+#ninja-slider3.fullscreen #ninja-slider3-prev, #ninja-slider4.fullscreen #ninja-slider4-prev {
+    left: -50px; 
+    opacity:1; 
+}
+#ninja-slider.fullscreen #ninja-slider-next, #ninja-slider2.fullscreen #ninja-slider2-next,
+#ninja-slider3.fullscreen #ninja-slider3-next, #ninja-slider4.fullscreen #ninja-slider4-next {
+    right: -50px;
+    opacity:1; 
+}
+/*pagination within the prev/next buttons*/
+#ninja-slider-prev div, #ninja-slider2-prev div, #ninja-slider3-prev div, #ninja-slider4-prev div {
+    opacity:0;margin-left:30px;transition:opacity 0.7s;
+}
+#ninja-slider-next div, #ninja-slider2-next div, #ninja-slider3-next div, #ninja-slider4-next div {
+    opacity:0;margin-right:30px;transition:opacity 0.7s;
+}
+#ninja-slider.fullscreen #ninja-slider-prev:hover div, #ninja-slider2.fullscreen #ninja-slider2-prev:hover div,
+#ninja-slider3.fullscreen #ninja-slider3-prev:hover div, #ninja-slider4.fullscreen #ninja-slider4-prev:hover div {
+    opacity:1;
+}
+#ninja-slider.fullscreen #ninja-slider-next:hover div, #ninja-slider2.fullscreen #ninja-slider2-next:hover div,
+#ninja-slider3.fullscreen #ninja-slider3-next:hover div, #ninja-slider4.fullscreen #ninja-slider4-next:hover div {
+    opacity:1;
+}
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before, #ninja-slider2-prev::before, #ninja-slider2-next::before,
+#ninja-slider3-prev::before, #ninja-slider3-next::before, #ninja-slider4-prev::before, #ninja-slider4-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+}
+#ninja-slider-prev::before, #ninja-slider2-prev::before, #ninja-slider3-prev::before, #ninja-slider4-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    backface-visibility:hidden;
+    left:14px;
+}
+#ninja-slider-next::before, #ninja-slider2-next::before, #ninja-slider3-next::before, #ninja-slider4-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    backface-visibility:hidden;
+    right:14px;
+}
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider-pager, #ninja-slider2-pager, #ninja-slider3-pager, #ninja-slider4-pager { 
+    display:none;
+}
+#ninja-slider-pager, #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play, 
+#ninja-slider2-pager, #ninja-slider2-prev, #ninja-slider2-next, #ninja-slider2-pause-play, 
+#ninja-slider3-pager, #ninja-slider3-prev, #ninja-slider3-next, #ninja-slider3-pause-play, 
+#ninja-slider4-pager, #ninja-slider4-prev, #ninja-slider4-next, #ninja-slider4-pause-play {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
